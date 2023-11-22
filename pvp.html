@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conecta 4</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body background="src/img/fondo-gameplay.jpg">
+<div class="container">
+  <h1>CONECTA 4</h1>
+  <table id="board">
+    <tbody>
+    </tbody>
+  </table>
+  <button id="reset">Reiniciar</button>
+  <button onclick="redirectToMainPage()">Volver al menú principal</button>
+</div>
+<script src="JS/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+  function redirectToMainPage() {
+      window.location.href = "index.html";
+  }
+</script>
+</body>
+</html>

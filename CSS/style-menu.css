@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+}
+
+.menu-selector img {
+    border: 5px rgb(32, 212, 218) solid;
+    border-radius: 10px;
+    height: 60%;
+    width: 70%;
+    transition: height 0.2s, width 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 30px rgba(100, 240, 233, 0.5), 20px 30px 20px rgba(100, 240, 233, 0.5) inset;
+}
+
+.menu-selector img:hover {
+    height: 62%;
+    width: 72%;
+    box-shadow: 0 0 50px rgba(240, 100, 240, 0.8), 25px 35px 25px rgba(240, 100, 240, 0.8) inset;
+    border: 5px rgb(187, 32, 218) solid;
+}
+
+.menu-selector h3 {
+    margin-top: 3%;
+    color: #a5b9a6;
+    font-weight: bolder;
+    padding: 0px 20% 20% 20%;
+    font-size: large;
+    text-shadow: 10px 10px 20px rgba(212, 100, 240, 0.8);
+    font-family: 'Nabla', sans-serif;
+    font-size: x-large;
+}
+
+.menu-selector a {
+    color: inherit;
+}
+
+.menu-selector a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.magicbutton {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    transition: 0.5s background-color;
+}
+
+.magicbutton:hover {
+    background-color: #6f4caf;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transition: 0.5s background-color, 0.4s box-shadow;
+}

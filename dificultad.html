@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conecta 4</title>
+  <link rel="stylesheet" href="CSS/style-menu.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="background-image: url('src/img/test border.jpg'); background-size: cover;">
+  <div class="container-md d-flex justify-content-center align-items-center text-center mt-5">
+    <div class="row">
+      <div class="col-4 menu-selector">
+        <a onclick="startGame('facil')">
+          <img src="src/img/easy.jpg" class="mx-auto d-block img-fluid" alt="facil">
+          <h3>Baby Bender</h3>
+        </a>
+      </div>
+      <div class="col-4 menu-selector">
+        <a onclick="startGame('normal')">
+          <img src="src/img/normal.jpg" class="mx-auto d-block img-fluid" alt="normal">
+          <h3>Bender</h3>
+        </a>
+      </div>
+      <div class="col-4 menu-selector">
+        <a onclick="startGame('dificil')">
+          <img src="src/img/hard.jpg" class="mx-auto d-block img-fluid" alt="dificil">
+          <h3>Dios Bender</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+  <button onclick="redirectToMainPage()" class="magicbutton">Volver al menú principal</button>
+  <script>
+      function startGame(difficulty) {
+          // Almacena la dificultad en localStorage
+          localStorage.setItem('gameDifficulty', difficulty);
+          window.location.href = `PvIA.html`;
+      }
+      function redirectToMainPage() {
+      window.location.href = "index.html";
+      }
+  </script>
+</body>
+</html>

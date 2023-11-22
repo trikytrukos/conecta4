@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    /* background-color: #00203f; LO DEJO COMENTADO POR SI NOS ARREPENTIMOS DE LA IMAGEN*/
+    color: #ffffff;
+    background-size:cover;
+    overflow: hidden; /*Para quitar el scroller y ajustar bien la img*/
+}
+/*Estilo para el titulo*/
+h1 {
+    font-size: 46px;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos para el tablero */
+#board {
+    background-color: transparent; /*Para que se vea el fondo trasnparente*/
+    backdrop-filter: blur(2px); /*Para que se vea el fondo borroso*/
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+
+}
+/* Estilos para las celdas del tablero (el segundo bg-color de arriba valorar si quitar o dejar)*/
+td {
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+    border: 2px solid #fff;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+/* Estilos para las fichas*/
+.red {
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #ff0000, 0 0 16px #ff0000, 0 0 24px #ffcc00;
+    animation: neonRojo 1.5s ease-in-out infinite alternate; /*mirar abajo @neonRojo para entender*/
+}
+
+.yellow {
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #ffcc00, 0 0 16px #ffcc00, 0 0 24px #ffcc00;
+    animation: neonAmarillo 1.5s ease-in-out infinite alternate; /*mirar abajo @neonAmarillo para entender*/
+}
+
+/* Estilos para el botón de reinicio */
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    transition: 0.5s background-color;
+}
+
+button:hover {
+    background-color: #6f4caf;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transition: 0.5s background-color, 0.4s box-shadow;
+}
+
+/* Estilos Futuristas para el cuadro de diálogo */
+.futuristic-popup {
+    background: none;
+    border: 2px solid #00ff00; /* Borde verde brillante */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos Futuristas para el botón de confirmación */
+.futuristic-button {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    transition: 0.5s background-color;
+}
+
+.futuristic-button:hover {
+    background-color: #6f4caf;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transition: 0.5s background-color, 0.4s box-shadow;
+}
+
+
+/* Estilos adicionales para dar formato al juego */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/*Animación generada por APU mucho boina*/
+@keyframes fall-from-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Aplica la animación a las fichas */
+.red, .yellow {
+    animation: fall-from-top 0.5s ease-out; 
+}

@@ -1,0 +1,29 @@
+<!-- HTML (index.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conecta 4</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body background="src/img/fondo-gameplay.jpg">
+  <div class="container">
+  <h1>CONECTA 4</h1>
+  <table id="board">
+    <tbody>
+    </tbody>
+  </table>
+  <button id="reset">Reiniciar</button>
+  <button onclick="redirectToDifficultyPage()">Elegir dificultad</button>
+
+</div>
+<script src="JS/main-maquina.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<script>
+    function redirectToDifficultyPage() {
+        window.location.href = "dificultad.html";
+    }
+</script>
+</body>
+</html>
